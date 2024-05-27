@@ -23,3 +23,8 @@ if (Test-Path($ChocolateyProfile)) {
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+# config PowerShell autocomplete toolTip
+Set-PSReadLineOption -ShowToolTips
+Set-PSReadLineOption -PredictionSource History
+
