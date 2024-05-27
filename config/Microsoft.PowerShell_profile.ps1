@@ -28,3 +28,13 @@ Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
 
+function cdd() { Set-Location "C:\Downloads" }
+function cdp() { Set-Location "C:\Users\Julio\Documents\REPO" }
+function cdpd() { Set-Location "C:\Users\Julio\Documents\REPO" }
+
+function opd() { open "C:\Downloads" }
+function opp() { open "C:\Users\Julio\Documents\REPO" }
+
+function edp() { code $PROFILE }
+function edh() { code "$HOME\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" }
+function eds() { code "$HOME\AppData\Local\oh-my-posh\spaceship.omp.json" }
