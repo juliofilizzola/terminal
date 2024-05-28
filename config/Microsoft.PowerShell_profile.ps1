@@ -1,4 +1,5 @@
 $MaximumHistoryCount = 20000
+$UserName = $env:USERNAME
 
 Import-Module PSReadLine
 Import-Module Get-ChildItemColor
@@ -30,12 +31,12 @@ Set-PSReadLineOption -PredictionSource History
 
 # config Alias
 function cdd() { Set-Location "C:\Downloads" }
-function cdp() { Set-Location "C:\Users\Julio\Documents\REPO" }
-function cdpd() { Set-Location "C:\Users\Julio\Documents\dev" }
+function cdp() { Set-Location "C:\Users\${UserName}\Documents\REPO" }
+function cdpd() { Set-Location "C:\Users\${UserName}\Documents\dev" }
 
 function opd() { open "C:\Downloads" }
-function opp() { open "C:\Users\Julio\Documents\REPO" }
-function oppd() { open "C:\Users\Julio\Documents\dev" }
+function opp() { open "C:\Users\${UserName}\Documents\REPO" }
+function oppd() { open "C:\Users\${UserName}\Documents\dev" }
 
 function edp() { code $PROFILE }
 function edh() { code "$HOME\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" }
